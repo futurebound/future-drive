@@ -8,11 +8,10 @@ import {
   singlestoreTableCreator,
   bigint,
 } from "drizzle-orm/singlestore-core";
-import test from "node:test";
 
 // give DBs a prefix so can have multiple side project DBs easily managed together in singlestore free plan
 export const createTable = singlestoreTableCreator(
-  (name) => `future-drive_${name}`,
+  (name) => `future_drive_${name}`,
 );
 
 // using int id's because of MySWL world performance increase
